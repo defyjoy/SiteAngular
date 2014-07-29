@@ -1,0 +1,29 @@
+﻿@helper Render(Action RenderPartial)
+{
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                    Click me...
+                </a>
+                <!--adding pull-right below, does not work-->
+                <span class="btn-group-panel">
+                    <button class="btn btn-success btn-xs" ui-sref="Create"> <i class="fa fa-plus panel-icon"></i>Create</button>
+                    <button class="btn btn-success btn-xs" ui-sref="List"><i class="fa fa-list panel-icon"></i>Back</button>
+                </span>
+            </h4>
+        </div>
+
+        <!--STOP here...-->
+        <div class="panel-body dashboard">
+            <div ui-view>
+                @{
+                    RenderPartial();
+                }
+            </div ui-view>
+            @GreyOverlay.Overlay()
+        </div>
+    </div>
+
+
+}

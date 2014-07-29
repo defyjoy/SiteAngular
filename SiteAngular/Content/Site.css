@@ -1,0 +1,129 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+a:active, a:hover, a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.btn:focus, .btn:hover, .btn:active {
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+.container {
+    width: 100% !important;
+}
+
+.btn-round{
+    border-radius:10px;
+}
+.body-content {
+    padding: 30px 30px;
+}
+
+.content {
+    padding-left: 250px;
+}
+
+.dashboard {
+    padding: 20px;
+}
+
+.btn-group {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.panel-heading {
+    position: relative;
+}
+
+.btn-group-panel {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+    .btn-group-panel .btn {
+        border-radius: 15px;
+        width: 80px;
+    }
+
+.panel-icon {
+    margin-right: 5px;
+}
+
+.panel-body {
+    position: relative;
+}
+
+    .panel-body .overlay {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background: #808080;
+        opacity: 0.5;
+    }
+
+    .panel-body:hover .overlay {
+        opacity: 0.7;
+    }
+
+.open > .dropdown-menu {
+    -o-animation-name: slidenavAnimation;
+    animation-name: slidenavAnimation;
+    -o-animation-duration: .2s;
+    animation-duration: .2s;
+    -o-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -o-animation-timing-function: ease;
+    animation-timing-function: ease;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: slidenavAnimation;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-name: slidenavAnimation;
+    -moz-animation-duration: .5s;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease;
+    -moz-animation-fill-mode: forwards;
+}
+
+@-moz-keyframes slidenavAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slidenavAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slidenavAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

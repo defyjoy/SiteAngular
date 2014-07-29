@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "Edit.js",
+  "sourceRoot": "",
+  "sources": [
+    "Edit.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,EAAA,WAAW,CAAC,OAAO,CAAC,UAApB,CAA+B,MAA/B,EAAsC,CAAC,QAAD,EAAU,QAAV,EAAmB,SAAC,MAAD,EAAQ,MAAR,GAAA,CAAnB,CAAtC,CAAA,CAAA;AAAA"
+}

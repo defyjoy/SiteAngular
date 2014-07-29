@@ -1,0 +1,30 @@
+﻿@using SiteAngular.Models.ViewModels;
+@model StudentViewModel
+<form role="form" ng-controller="Create">
+    <div class="form-group">
+        @Html.LabelFor(x => x.FirstName)
+        @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control", @placeholder = "enter first name" , @ng_model="student.FirstName"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.LastName)
+        @Html.TextBoxFor(x => x.LastName, new { @class = "form-control", @placeholder = "enter last name", @ng_model = "student.LastName" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(x => x.Address)
+        @Html.TextAreaFor(x => x.LastName, new { @class = "form-control", @placeholder = "enter last name", @ng_model = "student.Address" })
+        <p class="help-block">Example block-level help text here.</p>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.DOB)
+        @Html.TextBoxFor(x => x.DOB, new { @class = "form-control", @placeholder = "enter last name", @ng_model = "student.DOB" })
+        <p class="help-block">Example block-level help text here.</p>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Phone)
+        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", @placeholder = "enter last name", @ng_model = "student.Phone" })
+        <p class="help-block">Example block-level help text here.</p>
+    </div>
+    <button type="submit" class="btn btn-primary" ng-click="Create(student)">Submit</button>
+</form>
