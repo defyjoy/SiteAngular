@@ -5,7 +5,7 @@
       Factory.query().$promise.then(function(result) {
         return $scope.students = result;
       });
-      return $scope.Delete = function(id) {
+      $scope.Delete = function(id) {
         Factory.remove({
           'id': id
         });
@@ -13,6 +13,12 @@
           reload: true,
           inherit: true,
           notify: true
+        });
+      };
+      return $scope.Edit = function(id, student) {
+        return $state.transitionTo('Edit', {
+          id: id,
+          student: student
         });
       };
     }

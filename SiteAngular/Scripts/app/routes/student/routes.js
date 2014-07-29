@@ -9,8 +9,7 @@
       templateUrl: '/Student/List'
     }).state('Edit', {
       url: '/students/edit/:id',
-      templateUrl: '/Student/Edit',
-      controller: 'Edit'
+      templateUrl: '/Student/Edit'
     });
   });
 

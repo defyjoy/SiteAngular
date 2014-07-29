@@ -12,10 +12,16 @@
         params: {
           id: "@id"
         }
+      },
+      update: {
+        method: 'put',
+        params: {
+          id: "@id"
+        }
       }
     });
   });
 
 }).call(this);
 
-//# sourceMappingURL=Factory.js.map
+//# sourceMappingURL=factory.js.map

@@ -9,4 +9,9 @@
             reload:true
             inherit: true
             notify: true
+            
+    $scope.Edit = (id,student)->
+        $state.transitionTo 'Edit',
+            id:id
+            student:student
 ]

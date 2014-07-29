@@ -16,11 +16,11 @@
 
         <!--STOP here...-->
         <div class="panel-body dashboard">
-            <div ui-view>
+            <div class="slide" ui-view>
                 @{
                     RenderPartial();
                 }
-            </div ui-view>
+            </div>
             @GreyOverlay.Overlay()
         </div>
     </div>
