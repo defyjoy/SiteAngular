@@ -21,3 +21,4 @@
 /// <reference path="app/controllers/students/edit.js" />
 /// <reference path="app/controllers/students/list.js" />
 /// <reference path="app/routes/student/routes.js" />
+/// <reference path="app/factory/student/factory.js" />

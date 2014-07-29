@@ -247,6 +247,12 @@
     <Content Include="Scripts\app\controllers\students\studentcontroller.min.js">
       <DependentUpon>studentcontroller.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\app\factory\student\Factory.js">
+      <DependentUpon>factory.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\factory\student\Factory.min.js">
+      <DependentUpon>Factory.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\app\routes\student\routes.js">
       <DependentUpon>routes.coffee</DependentUpon>
     </Content>
@@ -594,6 +600,12 @@
     </Content>
     <Content Include="Scripts\app\controllers\students\Edit.min.js.map">
       <DependentUpon>Edit.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\factory\student\Factory.js.map">
+      <DependentUpon>Factory.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\factory\student\Factory.min.js.map">
+      <DependentUpon>Factory.min.js</DependentUpon>
     </Content>
     <None Include="Scripts\jQuery\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jQuery\jquery-2.1.1.js" />
