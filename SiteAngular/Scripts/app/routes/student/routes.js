@@ -6,7 +6,8 @@
       templateUrl: '/Student/Create'
     }).state('List', {
       url: '/',
-      templateUrl: '/Student/List'
+      templateUrl: '/Student/List',
+      controller: 'List'
     }).state('Edit', {
       url: '/students/edit/:id',
       templateUrl: '/Student/Edit'

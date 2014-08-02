@@ -3,9 +3,16 @@
   SiteAngular.Student.controller('Create', [
     '$scope', '$state', 'Factory', function($scope, $state, Factory) {
       return $scope.Create = function(student) {
+        if (student === void 0) {
+          toastr.error("Please fill the required input fields");
+          return;
+        }
         return Factory.save(student).$promise.then(function(result) {
           console.log(result);
           return $state.go('List');
+        }, function(error) {
+          console.log(error);
+          return toastr.error(error.data);
         });
       };
     }

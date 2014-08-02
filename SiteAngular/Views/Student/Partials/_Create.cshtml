@@ -1,30 +1,77 @@
 ﻿@using SiteAngular.Models.ViewModels;
 @model StudentViewModel
-<form role="form" ng-controller="Create">
-    <div class="form-group">
-        @Html.LabelFor(x => x.FirstName)
-        @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control", @placeholder = "enter first name" , @ng_model="student.FirstName"})
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(x => x.LastName)
-        @Html.TextBoxFor(x => x.LastName, new { @class = "form-control", @placeholder = "enter last name", @ng_model = "student.LastName" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(x => x.Address)
-        @Html.TextAreaFor(x => x.LastName, new { @class = "form-control", @placeholder = "enter last name", @ng_model = "student.Address" })
-        <p class="help-block">Example block-level help text here.</p>
-    </div>
+<div class="row">
+    <form role="form" class="form-horizontal" ng-controller="Create">
+        <div class="col-md-7 col-lg-7">
+            <div class="form-group">
+                @Html.LabelFor(x => x.FirstName, new { @class = "col-lg-2" })
+                <div class="col-lg-10">
+                    @Html.TextBoxFor(x => x.FirstName, new { @class = "form-control input-sm", @placeholder = "enter first name", @ng_model = "student.FirstName" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.LastName, new { @class = "col-lg-2" })
 
-    <div class="form-group">
-        @Html.LabelFor(x => x.DOB)
-        @Html.TextBoxFor(x => x.DOB, new { @class = "form-control", @placeholder = "enter last name", @ng_model = "student.DOB" })
-        <p class="help-block">Example block-level help text here.</p>
-    </div>
+                <div class="col-lg-10">
+                    @Html.TextBoxFor(x => x.LastName, new { @class = "form-control input-sm", @placeholder = "enter last name", @ng_model = "student.LastName" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Address, new { @class = "col-lg-2" })
+                <div class="col-lg-10">
+                    @Html.TextAreaFor(x => x.LastName, new { @class = "form-control input-sm", @placeholder = "enter last name", @ng_model = "student.Address" })
+                    <p class="help-block">Example block-level help text here.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.DOB, new { @class = "col-lg-2" })
+                <div class="col-lg-10">
+                    @Html.TextBoxFor(x => x.DOB, new { @class = "form-control input-sm", @placeholder = "enter last name", @ng_model = "student.DOB" })
+                    <p class="help-block">Example block-level help text here.</p>
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(x => x.Phone, new { @class = "col-lg-2" })
+                <div class="col-lg-10">
+                    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control input-sm", @placeholder = "enter last name", @ng_model = "student.Phone" })
+                    <p class="help-block">Example block-level help text here.</p>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm" ng-click="Create(student)">Submit</button>
+        </div>
 
-    <div class="form-group">
-        @Html.LabelFor(x => x.Phone)
-        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", @placeholder = "enter last name", @ng_model = "student.Phone" })
-        <p class="help-block">Example block-level help text here.</p>
-    </div>
-    <button type="submit" class="btn btn-primary" ng-click="Create(student)">Submit</button>
-</form>
+        @*<div class="col-md-5 col-lg-5">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.Building, new { @class = "col-lg-3" })
+                            <div class="col-lg-9">
+                                @Html.TextBoxFor(x => x.Building, new { @class = "form-control input-sm", @placeholder = "enter first name", @ng_model = "Addresses.Building" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.Street, new { @class = "col-lg-3" })
+                            <div class="col-lg-9">
+                                @Html.TextBoxFor(x => x.Street, new { @class = "form-control input-sm", @placeholder = "enter last name", @ng_model = "Addresses.Street" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.LandMark, new { @class = "col-lg-3" })
+                            <div class="col-lg-9">
+                                @Html.TextBoxFor(x => x.LandMark, new { @class = "form-control input-sm", @placeholder = "enter last name", @ng_model = "Addresses.LandMark" })
+                                <p class="help-block">Example block-level help text here.</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(x => x.District, new { @class = "col-lg-3" })
+                            <div class="col-lg-9">
+                                @Html.TextBoxFor(x => x.District, new { @class = "form-control input-sm", @placeholder = "enter last name", @ng_model = "Addresses.District" })
+                                <p class="help-block">Example block-level help text here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+    </form>
+</div>

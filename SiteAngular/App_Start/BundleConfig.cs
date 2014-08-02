@@ -26,11 +26,13 @@ namespace SiteAngular
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/font-awesome.css",
+                      "~/Content/toastr.css",
                       "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include("~/Scripts/angular/angular.js","~/Scripts/angular/angular-*"));
             bundles.Add(new ScriptBundle("~/bundles/ngControllers").IncludeDirectory("~/Scripts/app/controllers","*.js",true));
             bundles.Add(new ScriptBundle("~/bundles/ngFactory").IncludeDirectory("~/Scripts/app/factory", "*.js", true));
+            bundles.Add(new ScriptBundle("~/bundles/toastr").Include("~/Scripts/toastr/toastr*"));
 
             bundles.Add(new ScriptBundle("~/bundles/ngServices").IncludeDirectory("~/Scripts/app/services","*.js",true));
 

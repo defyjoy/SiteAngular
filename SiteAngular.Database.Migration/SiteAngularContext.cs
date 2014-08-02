@@ -21,5 +21,7 @@ namespace SiteAngular.Database.Migration
             builder.Configurations.AddFromAssembly(typeof(StudentMap).Assembly);
             base.OnModelCreating(builder);;
         }
+
+        public System.Data.Entity.DbSet<SiteAngular.Core.Models.Students> Students { get; set; }
     }
 }

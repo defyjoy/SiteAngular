@@ -2,16 +2,23 @@
 (function() {
   SiteAngular.Student.controller('Edit', [
     '$scope', '$state', '$stateParams', 'Factory', function($scope, $state, $stateParams, factory) {
-      var id, student;
-      id = $stateParams.id;
-      student = factory.get({
-        id: id
+      factory.get({
+        id: $stateParams.id
+      }).$promise.then(function(result) {
+        return $scope.student = result;
+      }, function(error) {
+        return toastr.error(error.data.Message);
       });
-      $scope.student = student;
       return $scope.Update = function(id, student) {
+        if (student === void 0) {
+          toastr.error("Please input correct values");
+        }
         return factory.update({
-          id: id,
-          studentToupdate: student
+          id: id
+        }, student).$promise.then(function(result) {
+          return $state.go('List');
+        }, function(error) {
+          return toastr.error(error.data);
         });
       };
     }

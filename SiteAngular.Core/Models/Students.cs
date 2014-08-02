@@ -9,7 +9,6 @@ namespace SiteAngular.Core.Models
 {
     public class Students
     {
-        [Required]
         public Guid StudentGuid { get; set; }
 
         [Required]

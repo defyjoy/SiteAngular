@@ -8,7 +8,4 @@ SiteAngular.Student.factory 'Factory', ($resource)->
             params:
                 id:"@id"
         update:
-            method:'put'
-            params:
-                id:"@id"
-            
+            method:'PUT'

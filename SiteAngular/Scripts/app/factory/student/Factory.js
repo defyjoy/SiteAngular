@@ -14,10 +14,7 @@
         }
       },
       update: {
-        method: 'put',
-        params: {
-          id: "@id"
-        }
+        method: 'PUT'
       }
     });
   });
