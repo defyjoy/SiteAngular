@@ -22,3 +22,5 @@
 /// <reference path="app/controllers/students/list.js" />
 /// <reference path="app/routes/student/routes.js" />
 /// <reference path="app/factory/student/factory.js" />
+/// <reference path="toastr/toastr.js" />
+/// <reference path="app/services/notifysvc.js" />
