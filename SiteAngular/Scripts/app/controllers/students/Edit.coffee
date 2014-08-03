@@ -14,6 +14,7 @@
             id:id
             student)
                 .$promise.then (result)->
+                    toastr.success "Details for " + result.FirstName + " successfully updated."
                     $state.transitionTo 'List',{},
                         reload:true
                         inherit:true

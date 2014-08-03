@@ -8,7 +8,7 @@
           return;
         }
         return Factory.save(student).$promise.then(function(result) {
-          console.log(result);
+          toastr.success("Records for " + result.FirstName + " successfully added.");
           return $state.go('List');
         }, function(error) {
           console.log(error);

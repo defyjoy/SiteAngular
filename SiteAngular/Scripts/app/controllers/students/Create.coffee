@@ -5,7 +5,7 @@
          return
 
         Factory.save(student).$promise.then (result)->
-            console.log result
+            toastr.success "Records for " + result.FirstName + " successfully added."
             $state.go 'List'
         ,(error)->
              console.log error

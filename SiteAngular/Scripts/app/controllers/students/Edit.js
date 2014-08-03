@@ -16,6 +16,7 @@
         return factory.update({
           id: id
         }, student).$promise.then(function(result) {
+          toastr.success("Details for " + result.FirstName + " successfully updated.");
           return $state.transitionTo('List', {}, {
             reload: true,
             inherit: true,
