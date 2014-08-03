@@ -7,24 +7,21 @@
                 @Html.LabelFor(x => x.FirstName, new { @class = "col-lg-2 control-label" })
                 <div class="col-lg-10">
                     <input type="text" name="FirstName" class="form-control input-sm" placeholder="Please enter first name" ng-model="student.FirstName" required />
-                    <span class="glyphicon glyphicon-ok form-control-feedback" ng-show="stdFrm.FirstName.$valid"></span>
-                    <span class="glyphicon glyphicon-remove form-control-feedback" ng-show="!stdFrm.FirstName.$valid"></span>
+                    <span class="glyphicon  form-control-feedback" ng-class="{'glyphicon-remove':stdFrm.Address.$valid==false,'glyphicon-ok':stdFrm.Address.$valid==true}"></span>
                 </div>
             </div>
             <div class="form-group form-group-sm has-feedback" ng-class="{'has-error':stdFrm.LastName.$valid==false,'has-success':stdFrm.LastName.$valid==true}">
                 @Html.LabelFor(x => x.LastName, new { @class = "col-lg-2 control-label" })
                 <div class="col-lg-10">
                     <input type="text" name="LastName" class="form-control input-sm" placeholder="Please enter last name" ng-model="student.LastName" required />
-                    <span class="glyphicon glyphicon-ok form-control-feedback" ng-show="stdFrm.LastName.$valid"></span>
-                    <span class="glyphicon glyphicon-remove form-control-feedback" ng-show="!stdFrm.LastName.$valid"></span>
+                    <span class="glyphicon glyphicon-ok form-control-feedback" ng-class="{'glyphicon-remove':stdFrm.LastName.$valid==false,'glyphicon-ok':stdFrm.LastName.$valid==true}"></span>
                 </div>
             </div>
             <div class="form-group form-group-sm has-feedback" ng-class="{'has-error':stdFrm.Address.$valid==false,'has-success':stdFrm.Address.$valid==true}">
                 @Html.LabelFor(x => x.Address, new { @class = "col-lg-2 control-label" })
                 <div class="col-lg-10">
                     <textarea name="Address" class="form-control" placeholder="Please enter last name" ng-model="student.Address" rows="4" required />
-                    <span class="glyphicon glyphicon-ok form-control-feedback" ng-show="stdFrm.Address.$valid"></span>
-                    <span class="glyphicon glyphicon-remove form-control-feedback" ng-show="!stdFrm.Address.$valid"></span>
+                    <span class="glyphicon glyphicon-ok form-control-feedback" ng-class="{'glyphicon-remove':stdFrm.Address.$valid==false,'glyphicon-ok':stdFrm.Address.$valid==true}"></span>
                     <p class="help-block">Example block-level help text here.</p>
                 </div>
             </div>
@@ -32,8 +29,7 @@
                 @Html.LabelFor(x => x.DOB, new { @class = "col-lg-2 control-label" })
                 <div class="col-lg-10">
                     <input type="text" name="DOB" class="form-control input-sm" placeholder="Please enter date of birth" ng-model="student.DOB" required />
-                    <span class="glyphicon glyphicon-ok form-control-feedback" ng-show="stdFrm.DOB.$valid"></span>
-                    <span class="glyphicon glyphicon-remove form-control-feedback" ng-show="!stdFrm.DOB.$valid"></span>
+                    <span class="glyphicon glyphicon-ok form-control-feedback" ng-class="{'glyphicon-remove':stdFrm.DOB.$valid==false,'glyphicon-ok':stdFrm.DOB.$valid==true}"></span>
                     <p class="help-block">Example block-level help text here.</p>
                 </div>
             </div>
@@ -41,8 +37,7 @@
                 @Html.LabelFor(x => x.Phone, new { @class = "col-lg-2 control-label" })
                 <div class="col-lg-10">
                     <input type="text" name="Phone" class="form-control input-sm" placeholder="Please enter phone number" ng-model="student.Phone" required />
-                    <span class="glyphicon glyphicon-ok form-control-feedback" ng-show="stdFrm.Phone.$valid"></span>
-                    <span class="glyphicon glyphicon-remove form-control-feedback" ng-show="!stdFrm.Phone.$valid"></span>
+                    <span class="glyphicon glyphicon-ok form-control-feedback" ng-class="{'glyphicon-remove':stdFrm.Phone.$valid==false,'glyphicon-ok':stdFrm.Phone.$valid==true}"></span>
                     <p class="help-block">Example block-level help text here.</p>
                 </div>
             </div>
