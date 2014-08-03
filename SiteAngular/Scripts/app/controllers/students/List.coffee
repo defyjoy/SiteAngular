@@ -1,17 +1,23 @@
-﻿SiteAngular.Student.controller 'List',['$scope','$state','Factory', ($scope,$state,Factory) -> 
-    Factory.query().$promise.then (result)->
-        $scope.students=result
+﻿SiteAngular.Student.controller 'List',['$scope','$state','Factory', ($scope,$state,factory) -> 
+    init = ->
+         factory.query().$promise.then (result)->
+                $scope.students = result
+                return
+         return
+         
+    init()
         
-        
-    $scope.Delete  = (id)-> 
-        Factory.remove('id': id)
-        $state.transitionTo 'List',{},
-            reload:true
-            inherit: true
-            notify: true
-            
-    $scope.Edit = (id,student)->
-        $state.transitionTo 'Edit',
-            id:id
-            student:student
+    $scope.Delete  = (id,idx)->
+        factory.remove('id': id).$promise.then (result)->
+            $scope.students.splice idx 
+            toastr.success "Student Deleted."
+            init()
+            return
+        , (error)->
+            toastr.error error.data.Message
+            return
+        return
+
+    $scope.changeStatus = (id )->
+    return
 ]
