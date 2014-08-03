@@ -75,59 +75,34 @@ a:active, a:hover, a:focus {
     .panel-body:hover .overlay {
         opacity: 0.7;
     }
-
 .open > .dropdown-menu {
-    -o-animation-name: slidenavAnimation;
-    animation-name: slidenavAnimation;
-    -o-animation-duration: .2s;
-    animation-duration: .2s;
-    -o-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-    -o-animation-timing-function: ease;
-    animation-timing-function: ease;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);  
+  opacity:1;
+}
+
+.dropdown-menu {
+    opacity: 0;
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    -ms-transform-origin: top;
+    -o-transform-origin: top;
+    transform-origin: top;
+    -webkit-animation-fill-mode: forwards;
     -o-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
-    -webkit-animation-name: slidenavAnimation;
-    -webkit-animation-duration: .5s;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease;
-    -webkit-animation-fill-mode: forwards;
-    -moz-animation-name: slidenavAnimation;
-    -moz-animation-duration: .5s;
-    -moz-animation-iteration-count: 1;
-    -moz-animation-timing-function: ease;
-    -moz-animation-fill-mode: forwards;
+    -webkit-transform: scale(1, 0);
+    -moz-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    -o-transform: scale(1, 0);
+    transform: scale(1, 0);
+    display: block;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
 }
 
-@-moz-keyframes slidenavAnimation {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slidenavAnimation {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes slidenavAnimation {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
 
 /*#region ng-animate */
 /* Have to set height explicity on ui-view 
