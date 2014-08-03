@@ -37,6 +37,11 @@ namespace SiteAngular.ApiControllers
             Guid StudentId;
             if (string.IsNullOrEmpty(id) || !Guid.TryParse(id, out StudentId))
                 return BadRequest("Invalid student id.");
+            Students student = await Context.Set<Students>().FindAsync(new Guid(id));
+            if (student == null)
+            {
+                return BadRequest("Student Not Found");
+            }
             return Ok<Students>(await Context.Set<Students>().FindAsync(new Guid(id)));
         }
 
@@ -68,12 +73,6 @@ namespace SiteAngular.ApiControllers
                 return ModelStateErrorResult(HttpStatusCode.BadRequest, ModelState);
             if (student == null)
                 return new HttpResponseMessage(HttpStatusCode.BadRequest);
-            //Students student = await Context.Set<Students>().FindAsync(new Guid(id));
-            //student.FirstName = studentToupdate.FirstName;
-            //student.LastName = studentToupdate.LastName;
-            //student.Address = studentToupdate.Address;
-            //student.DOB = studentToupdate.DOB;
-            //student.Phone = studentToupdate.Phone;
 
             Context.Entry(student).State = EntityState.Modified;
             try
