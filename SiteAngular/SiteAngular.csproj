@@ -269,6 +269,12 @@
     <Content Include="Scripts\app\routes\student\routes.min.js">
       <DependentUpon>routes.js</DependentUpon>
     </Content>
+    <Content Include="Scripts\app\services\notifySvc.js">
+      <DependentUpon>notifySvc.coffee</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\services\notifySvc.min.js">
+      <DependentUpon>notifySvc.js</DependentUpon>
+    </Content>
     <Content Include="Scripts\app\startup.js" />
     <Content Include="Scripts\bootstrap\bootstrap.js" />
     <Content Include="Scripts\bootstrap\bootstrap.min.js" />
@@ -619,6 +625,13 @@
     </Content>
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
+    <Content Include="Scripts\app\services\notifySvc.coffee" />
+    <Content Include="Scripts\app\services\notifySvc.js.map">
+      <DependentUpon>notifySvc.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app\services\notifySvc.min.js.map">
+      <DependentUpon>notifySvc.min.js</DependentUpon>
+    </Content>
     <None Include="Scripts\jQuery\jquery-2.1.1.intellisense.js" />
     <None Include="Scripts\jQuery\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jQuery\jquery.validate.js" />

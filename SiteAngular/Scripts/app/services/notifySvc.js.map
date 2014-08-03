@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "notifySvc.js",
+  "sourceRoot": "",
+  "sources": [
+    "notifySvc.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA;AAAA"
+}
