@@ -16,7 +16,11 @@
         return factory.update({
           id: id
         }, student).$promise.then(function(result) {
-          return $state.go('List');
+          return $state.transitionTo('List', {}, {
+            reload: true,
+            inherit: true,
+            notify: true
+          });
         }, function(error) {
           return toastr.error(error.data);
         });
